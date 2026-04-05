@@ -54,26 +54,28 @@ contactForm.addEventListener('submit',async (e)=>{
     
     }
 
-    try{
-        fetch("https://nonincreasable-jaxen-solenoidal.ngrok-free.dev/index", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept" : "application/json"
-        },
-        body: JSON.stringify({
-          nama: data.nama,
-          email: data.email,
-          telepon: parseInt(data.telepon),
-          lembaga : data.lembaga,
-          pesan : data.pesan
-      })
-    })
+ 
+    fetch("https://formspree.io/f/mgopplwl",{
+    method: "post",
+    headers : {
+        "Content-Type" : "application/json",
+        "Accept" : "application/json"
+    },
+
+    body : JSON.stringify(data)
+    }).then(res => {
+    if(res.ok){
+        showAlert('data anda berhasil terkirim')
         contactForm.reset()
-        showAlert('data berhasil tersimpan')
-    }catch(err){
-      wrongAlert('data gagal dikirim')
+    }else{
+        wrongAlert('data gagal dikirim')
     }
+    })
+    .catch(err =>{
+        wrongAlert('terjadi kesalahan/error')
+    })
+
+
 
 })
 
