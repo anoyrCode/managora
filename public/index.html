@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>MANAGORA | Sistem Manajemen Komplain Terintegrasi untuk Lembaga Pendidikan</title>
+  <meta name="description" content="MANAGORA adalah sistem manajemen komplain berbasis web untuk lembaga pendidikan. Otomatisasi penugasan, dashboard multi-divisi, dan rekapitulasi data komplain real-time.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="customAlert" class="alert-box">
+  <p id="alertText">Pesan di sini</p>
+  <button onclick="closeAlert()">OK</button>
+  </div>
+  
+  <div id="wrowngAlert" class="wrong-box">
+  <p id="alertWrong">Pesan di sini</p>
+  <button onclick="closeAlert()">OK</button>
+  </div>
+
+  <div class="navbar">
+    <div class="container nav-container">
+      <div class="logo">MANAGORA<span>.</span></div>
+      <div class="nav-links">
+        <a href="#home">Beranda</a>
+        <a href="#masalah">Masalah</a>
+        <a href="#fitur">Fitur</a>
+        <a href="#demo">Demo</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#tim">Tim Kami</a>
+        <a href="#kontak" class="btn-outline" style="padding: 8px 20px;">Daftar Early Access</a>
+      </div>
+      <div class="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </div>
+
+
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div data-aos="fade-up" data-aos-duration="800">
+        <div class="hero-badge"><i class="fas fa-chalkboard-user"></i>  MVP Segera Hadir • Early Access Dibuka</div>
+        <h1 class="hero-title">Keluhan Lembaga Pendidikan <span>Terselesaikan</span> dengan MANAGORA</h1>
+        <p class="hero-desc">Sistem manajemen komplain terintegrasi berbasis aplikasi dan website. Otomatisasi penugasan lintas divisi, dashboard real-time, dan rekapitulasi data komplain yang terukur. Dirancang khusus untuk sekolah, madrasah, dan yayasan pendidikan.</p>
+        <div class="hero-buttons">
+          <button class="btn-primary" onclick="document.getElementById('kontak').scrollIntoView({behavior: 'smooth'})"><i class="fas fa-rocket"></i> Daftar Early Access</button>
+          <button class="btn-outline" onclick="document.getElementById('demo').scrollIntoView({behavior: 'smooth'})"><i class="fas fa-play-circle"></i> Lihat Demo Mockup</button>
+        </div>
+        <div style="margin-top: 32px; display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; justify-content: flex-start;">
+          <span><i class="fas fa-check-circle" style="color: var(--accent-gold);"></i> Auto-assign teknisi</span>
+          <span><i class="fas fa-chart-line"></i> Rekapitulasi otomatis</span>
+          <span><i class="fas fa-shield-alt"></i> Komplain internal & eksternal</span>
+        </div>
+      </div>
+      <div data-aos="fade-left" data-aos-duration="800" class="hero-image">
+        <div class="hero-image-inner">
+          <i class="fas fa-ticket-alt" style="color: #D4AF37; font-size: 1.2rem;"></i>
+          <p style="margin-top: 12px; font-weight: 500;">Dashboard Multi-Divisi</p>
+          <div style="height: 160px; background: linear-gradient(145deg, #112240, #0A192F); border-radius: 16px; margin-top: 16px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px;">
+            <span>📊 Komplain Masuk: 0</span>
+            <span>✅ Terselesaikan: 0</span>
+            <span>⏳ Proses: 0</span>
+          </div>
+        </div>
+        <div class="floating-card">
+          <i class="fas fa-bell" style="color: var(--navy);"></i> <strong>Notifikasi Real-time</strong>
+          <div style="font-size: 12px; margin-top: 6px;">Komplain baru akan langsung masuk ke dashboard divisi terkait</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="masalah">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Mengapa <span style="color: var(--accent-gold);">MANAGORA</span> Dibutuhkan?</h2>
+      <p class="section-sub" data-aos="fade-up">Berdasarkan observasi di berbagai institusi pendidikan, kami menemukan tantangan nyata dalam pengelolaan komplain.</p>
+      <div class="comparison-grid">
+        <div class="problem-box" data-aos="fade-right">
+          <h3><i class="fas fa-exclamation-triangle"></i> Kondisi Saat Ini</h3>
+          <ul class="problem-list">
+            <li><i class="fas fa-times-circle" style="color: #E53E3E;"></i> Formulir fisik & pencatatan manual yang mudah hilang</li>
+            <li><i class="fas fa-times-circle" style="color: #E53E3E;"></i> Pesan WhatsApp tidak terpusat, keluhan sering terlewat</li>
+            <li><i class="fas fa-times-circle" style="color: #E53E3E;"></i> Laporan lisan tanpa bukti tertulis</li>
+            <li><i class="fas fa-times-circle" style="color: #E53E3E;"></i> Penugasan teknisi lambat karena harus melalui admin</li>
+            <li><i class="fas fa-times-circle" style="color: #E53E3E;"></i> Tidak ada tracking status bagi pelapor</li>
+            <li><i class="fas fa-times-circle" style="color: #E53E3E;"></i> Sulit mengevaluasi masalah yang paling sering muncul</li>
+          </ul>
+        </div>
+        <div class="solution-box" data-aos="fade-left">
+          <h3><i class="fas fa-lightbulb"></i> Solusi MANAGORA</h3>
+          <ul class="solution-list">
+            <li><i class="fas fa-check-circle" style="color: var(--accent-gold);"></i> Digitalisasi seluruh alur komplain</li>
+            <li><i class="fas fa-check-circle" style="color: var(--accent-gold);"></i> Sistem terpusat berbasis web</li>
+            <li><i class="fas fa-check-circle" style="color: var(--accent-gold);"></i> Setiap komplain tercatat & terdokumentasi</li>
+            <li><i class="fas fa-check-circle" style="color: var(--accent-gold);"></i> Auto-assign teknisi berdasarkan kategori</li>
+            <li><i class="fas fa-check-circle" style="color: var(--accent-gold);"></i> Notifikasi status real-time untuk pelapor</li>
+            <li><i class="fas fa-check-circle" style="color: var(--accent-gold);"></i> Rekapitulasi otomatis & analitik komplain</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="fitur">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Inovasi <span style="color: var(--accent-gold);">MANAGORA</span></h2>
+      <p class="section-sub" data-aos="fade-up">Lebih dari sekadar helpdesk — ekosistem penanganan keluhan yang cerdas dan otomatis.</p>
+      <div class="features-grid">
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="feature-icon"><i class="fas fa-robot"></i></div>
+          <h3>Auto-Assign Teknisi</h3>
+          <p>Berdasarkan kategori komplain (sarana, kantin, administrasi, akademik) laporan langsung masuk ke dashboard divisi terkait tanpa antrian manual. Respons lebih cepat dan tepat sasaran.</p>
+        </div>
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="feature-icon"><i class="fas fa-exchange-alt"></i></div>
+          <h3>Komplain Internal & Eksternal</h3>
+          <p>Divisi dapat melaporkan masalah ke divisi lain secara terstruktur. Orang tua/siswa juga bisa melapor via form publik. Semua dalam satu platform terintegrasi.</p>
+        </div>
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>Rekapitulasi Otomatis</h3>
+          <p>Grafik tren keluhan, SLA response time, dan laporan periodik membantu manajemen mengambil keputusan berbasis data. Evaluasi berkala jadi lebih mudah.</p>
+        </div>
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="feature-icon"><i class="fas fa-bell"></i></div>
+          <h3>Notifikasi Real-time</h3>
+          <p>Pelapor & teknisi mendapat update status via dashboard. Transparansi penuh dari status "diterima" → "diproses" → "selesai".</p>
+        </div>
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="500">
+          <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Responsif & User Friendly</h3>
+          <p>Antarmuka web yang ramah pengguna awam, diakses dari desktop, tablet, maupun smartphone. Tidak perlu instalasi rumit.</p>
+        </div>
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="600">
+          <div class="feature-icon"><i class="fas fa-database"></i></div>
+          <h3>Arsip Terpusat & Backup</h3>
+          <p>Semua riwayat komplain tersimpan rapi, bisa dicari, difilter, dan diekspor. Tidak ada kertas berserakan atau chat WhatsApp tercecer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="demo" class="dashboard-showcase">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Lihat bagaimana <span style="color: var(--accent-gold);">MANAGORA</span> bekerja</h2>
+      <p class="section-sub" data-aos="fade-up">Multi-dashboard divisi dengan tampilan intuitif dan prioritas tugas otomatis</p>
+      <div data-aos="fade-up" class="dashboard-container">
+        <div class="dashboard-mock">
+          <div class="mock-header">
+            <div class="mock-circle"></div>
+            <div class="mock-circle" style="background: #ffbd2e;"></div>
+            <div class="mock-circle" style="background: #27c93f;"></div>
+            <span style="color: #94a3b8; margin-left: 12px; font-size: 12px;">MANAGORA MVP - Dashboard Divisi Dapur/Kantin</span>
+          </div>
+          <div class="mock-content">
+            <div class="mock-sidebar">
+              <div style="color: white; margin-bottom: 16px;">📋 Antrian Komplain</div>
+              <div class="mock-item" style="display: flex; align-items: center; justify-content: space-between; padding: 0 12px;"><span>Kebersihan Makanan</span> <span class="status-badge">Baru</span></div>
+              <div class="mock-item" style="display: flex; align-items: center; justify-content: space-between; padding: 0 12px;"><span>Cita Rasa</span> <span class="status-badge">Proses</span></div>
+              <div class="mock-item" style="display: flex; align-items: center; justify-content: space-between; padding: 0 12px;"><span>Harga Menu</span> <span class="status-badge">Selesai</span></div>
+            </div>
+            <div class="mock-main">
+              <div style="display: flex; justify-content: space-between; color: #cbd5e1; margin-bottom: 16px;"><span>🆔 KOM-0012</span> <span>⏱️ 2 jam lalu</span></div>
+              <div style="background: #1E3A5F; border-radius: 12px; margin: 16px 0; padding: 12px; color: white;">🍽️ Laporan: Makanan tidak sesuai standar kebersihan, mohon tindak lanjut dari divisi dapur</div>
+              <div style="background: #0F2B3F; border-radius: 12px; padding: 10px; text-align: right;"><span style="color: #D4AF37;">✅ Otomatis ditugaskan ke: Staff Kantin</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 40px;">
+        <p style="color: #1e293b;">⚡ Sistem secara cerdas mengarahkan keluhan ke divisi tepat tanpa perantara admin</p>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="roadmap" class="roadmap">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Tahapan <span style="color: var(--accent-gold);">Pengembangan</span></h2>
+      <p class="section-sub" data-aos="fade-up">MANAGORA saat ini dalam tahap MVP dan validasi pasar. Berikut roadmap kami:</p>
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-phase">1</div>
+          <h3>✅ Research & Observasi</h3>
+          <p>Observasi di beberapa institusi pendidikan lokal untuk memetakan kendala birokrasi dalam penanganan keluhan internal maupun eksternal.</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="timeline-phase">2</div>
+          <h3>🔄 MVP Development</h3>
+          <p>Pengembangan fitur inti: dashboard multi-divisi, sistem notifikasi, auto-assign, dan rekapitulasi data komplain otomatis.</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="timeline-phase">3</div>
+          <h3>📊 Validasi Pasar</h3>
+          <p>Survei terbatas ke pengelola lembaga pendidikan untuk memastikan antarmuka mudah digunakan oleh pengguna awam.</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="timeline-phase">4</div>
+          <h3>🚀 Early Access</h3>
+          <p>Peluncuran terbatas untuk mitra awal. Kami mengundang lembaga pendidikan untuk menjadi penguji pertama.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="tim" class="team-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Tentang <span style="color: var(--accent-gold);">Kami</span></h2>
+      <p class="section-sub" data-aos="fade-up">Kami adalah tim yang berdedikasi untuk menghadirkan solusi manajemen komplain terbaik bagi lembaga pendidikan di Indonesia.</p>
+     
+      <div class="team-grid">
+     
+        <div class="team-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="team-avatar">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Syamzada Daiyan Muslim</h3>
+            <div class="team-role">Ketua Tim / System Developer & Project Manager</div>
+            <div class="team-detail">
+              <div class="team-detail-item"><i class="fas fa-code"></i> <strong>Keahlian:</strong> Pemrograman dan pengembangan sistem</div>
+              <div class="team-detail-item"><i class="fas fa-tasks"></i> <strong>Tugas Utama:</strong> Merancang dan mengembangkan sistem, mengkoordinasikan jalannya proyek, serta memastikan pengembangan produk berjalan sesuai rencana</div>
+            </div>
+          </div>
+        </div>
+        
+    
+        <div class="team-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="team-avatar">
+            <i class="fas fa-palette"></i>
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Muthohar Alamudi</h3>
+            <div class="team-role">Bendahara & Desainer</div>
+            <div class="team-detail">
+              <div class="team-detail-item"><i class="fas fa-drafting-compass"></i> <strong>Keahlian:</strong> Desain visual dan pengelolaan keuangan</div>
+              <div class="team-detail-item"><i class="fas fa-chart-line"></i> <strong>Tugas Utama:</strong> Mengelola keuangan proyek, menyusun pencatatan cash flow, serta membuat desain visual yang mendukung tampilan dan identitas sistem</div>
+            </div>
+          </div>
+        </div>
+        
+      
+        <div class="team-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="team-avatar">
+            <i class="fa-regular fa-lightbulb"></i>
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Muhammad Fadel Andriansyah</h3>
+            <div class="team-role">Marketing & Digital Promotion</div>
+            <div class="team-detail">
+              <div class="team-detail-item"><i class="fas fa-bullhorn"></i> <strong>Keahlian:</strong> Social media marketing</div>
+              <div class="team-detail-item"><i class="fas fa-rocket"></i> <strong>Tugas Utama:</strong> Menyusun strategi pemasaran digital, mengelola promosi melalui media sosial, serta meningkatkan jangkauan dan awareness terhadap produk</div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="team-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="team-avatar">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Ivan Nur Setyono</h3>
+            <div class="team-role">Partnership & Communication Officer</div>
+            <div class="team-detail">
+              <div class="team-detail-item"><i class="fas fa-comments"></i> <strong>Keahlian:</strong> Komunikasi interpersonal dan koordinasi</div>
+              <div class="team-detail-item"><i class="fas fa-network-wired"></i> <strong>Tugas Utama:</strong> Menjalin komunikasi dengan calon mitra, membangun relasi dengan lembaga pendidikan, serta membantu proses kerja sama dan ekspansi jaringan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="resources-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Sarana & <span style="color: var(--accent-gold);">Sumber Daya</span></h2>
+      <p class="section-sub" data-aos="fade-up">Dukungan penuh dari berbagai aspek untuk mewujudkan MANAGORA menjadi solusi terbaik.</p>
+      
+      <div class="resources-grid">
+     
+        <div class="resource-card" data-aos="flip-left" data-aos-delay="100">
+          <div class="resource-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Perangkat Kerja Tim</h3>
+          <p>Setiap anggota tim memiliki laptop pribadi yang digunakan untuk pengembangan sistem, desain produk, pengelolaan proyek, serta kegiatan pemasaran digital.</p>
+        </div>
+        
+       
+        <div class="resource-card" data-aos="flip-left" data-aos-delay="200">
+          <div class="resource-icon"><i class="fas fa-globe"></i></div>
+          <h3>Platform Sistem Berbasis Website dan aplikasi</h3>
+          <p>Produk dikembangkan berbasis website sehingga dapat diakses melalui berbagai perangkat (laptop, tablet, smartphone) melalui browser dan aplikasi yang terpasang</p>
+        </div>
+        
+        
+        <div class="resource-card" data-aos="flip-left" data-aos-delay="300">
+          <div class="resource-icon"><i class="fas fa-photo-video"></i></div>
+          <h3>Konten Promosi Digital</h3>
+          <p>Tim telah menyiapkan konten digital untuk kegiatan promosi, edukasi pasar, serta demonstrasi sistem kepada calon pengguna melalui media sosial.</p>
+        </div>
+        
+      
+        <div class="resource-card" data-aos="flip-left" data-aos-delay="400">
+          <div class="resource-icon"><i class="fas fa-people-arrows"></i></div>
+          <h3>Sistem Kerja Hybrid</h3>
+          <p>Kombinasi kerja jarak jauh dan koordinasi langsung memungkinkan kolaborasi fleksibel sekaligus menjaga efisiensi pengembangan proyek.</p>
+        </div>
+      </div>
+      
+     
+      <div class="resource-card" style="margin-top: 32px;" data-aos="fade-up">
+        <div class="resource-icon"><i class="fas fa-seedling"></i></div>
+        <h3>Sumber Daya Non-Fisik & Keunggulan Tim</h3>
+        <ul class="resource-list">
+          <li><i class="fas fa-check-circle"></i> Pemahaman mendalam terhadap dinamika lingkungan pesantren dan lembaga pendidikan</li>
+          <li><i class="fas fa-check-circle"></i> Akses langsung ke lembaga pendidikan untuk uji prototipe dan evaluasi produk</li>
+          <li><i class="fas fa-check-circle"></i> Rencana peningkatan kompetensi melalui pelatihan digital marketing bersertifikat</li>
+          <li><i class="fas fa-check-circle"></i> Alokasi anggaran belanja alat tulis kantor untuk kelancaran administrasi bisnis</li>
+          <li><i class="fas fa-check-circle"></i> Kombinasi keterampilan teknis, sarana adaptif, serta relasi di lingkungan target pasar</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak" class="contact-form-section">
+    <div class="container">
+      <div class="cta-section" data-aos="zoom-in-up">
+        <h2>Daftar Early Access MANAGORA</h2>
+        <p style="margin-bottom: 28px; max-width: 600px; margin-left: auto; margin-right: auto;">Jadilah lembaga pendidikan pertama yang mencoba sistem manajemen komplain terintegrasi ini. Gratis untuk pengguna awal!</p>
+        <button class="btn-white" onclick="document.getElementById('early-form').scrollIntoView({behavior: 'smooth'})"><i class="fas fa-calendar-check"></i> Daftar Sekarang</button>
+      </div>
+
+      <div id="early-form" class="form-container" data-aos="fade-up">
+        <h3 style="text-align: center; margin-bottom: 32px; color: var(--navy);">Formulir Pendaftaran Early Access</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <input id="nama" type="text" placeholder="Nama Lengkap" required>
+          </div>
+          <div class="form-group">
+            <input id="email" type="email" placeholder="Email Institusi" required>
+          </div>
+          <div class="form-group">
+            <input id="tel" type="number" placeholder="Nomor Telepon / WhatsApp">
+          </div>
+          <div class="form-group">
+            <select id="lembaga" required>
+              <option value="">Jenis Lembaga Pendidikan</option>
+              <option>SD / MI</option>
+              <option>SMP / MTs</option>
+              <option>SMA / SMK / MA</option>
+              <option>Perguruan Tinggi</option>
+              <option>Yayasan / Pondok Pesantren</option>
+              <option>Lembaga Kursus / Pelatihan</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea id="pesan" rows="4" placeholder="Ceritakan tantangan pengelolaan komplain di lembaga Anda..." maxlength="2000"></textarea>
+          </div>
+          <button id="tombol-sub" type="submit" class="btn-primary" style="width: 100%; justify-content: center;"><i class="fas fa-paper-plane"></i> Kirim Pendaftaran</button>
+        </form>
+        <p style="text-align: center; margin-top: 20px; font-size: 0.85rem; color: #64748b;">*Tim kami akan menghubungi Anda dalam 2x24 jam untuk diskusi lebih lanjut.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">MANAGORA<span style="color: #D4AF37;">.</span></div>
+          <p>Sistem Manajemen Komplain Terintegrasi untuk lembaga pendidikan di Indonesia. Mewujudkan layanan prima & birokrasi yang responsif.</p>
+          <div class="social-icons">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-tiktok"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+        <div>
+          <h4 style="color: white;">Produk</h4>
+          <ul class="footer-links">
+            <li>Keunggulan Produk</li>
+            <li>Rencana Pengembangan</li>
+            <li>Program Uji Coba</li>
+            <li>Akses Awal Pengguna</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: white;">Perusahaan</h4>
+          <ul class="footer-links">
+            <li>Profil Perusahaan</li>
+            <li>Tim Pengembang</li>
+            <li>Informasi Terbaru</li>
+            <li>Privasi Pengguna</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: white;">Dukungan</h4>
+          <ul class="footer-links">
+            <li>Informasi Bantuan</li>
+            <li>Kontak Layanan</li>
+            <li>Panduan Sistem</li>
+            <li>Status Sistem</li>
+          </ul>
+        </div>
+      </div>
+      <hr style="border-color: #1E3A5F; margin: 30px 0;">
+      <div style="text-align: center; font-size: 0.9rem;">© 2026 MANAGORA — Sistem Manajemen Komplain untuk Pendidikan. Seluruh hak cipta dilindungi.</div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
