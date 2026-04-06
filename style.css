@@ -115,10 +115,11 @@
       font-size: 1.8rem;
       font-weight: 800;
       color: var(--navy);
-      letter-spacing: -0.5px;
+      letter-spacing: 4px;
     }
     .logo span {
       color: var(--accent-gold);
+      letter-spacing: 4px;
     }
     .nav-links {
       display: flex;
